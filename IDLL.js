@@ -17,6 +17,8 @@ class IDLL {
     }
 
     addToHead(val) {
+        // Make a new node with the URL thats passed in!
+        // Then make it the new head; adjust other attributes as well. 
         let newNode = new DLLNode(val);
         if (this.length >= 1) {
             this.head.prev = newNode;
@@ -29,7 +31,9 @@ class IDLL {
         this.length++;
     }
 
-    addToTail(val) {        
+    addToTail(val) { 
+        // Make a new node with the URL thats passed in!
+        // Then assign it as the new tail; adjust other attributes as well.        
         let newNode = new DLLNode(val);
         if (this.length >= 1) {
             this.tail.next = newNode;
@@ -43,6 +47,7 @@ class IDLL {
     }
 
     removeFromHead() {
+        // Remove the head node and adjust necessary attributes of other nodes;
         if (!this.head) return;
         const oldHead = this.head;
         this.head = oldHead.next;
@@ -52,6 +57,7 @@ class IDLL {
     }
 
     removeFromTail() { 
+        // Remove the tail node and adjust necessary attributes of other nodes;
         if (!this.tail) return;
         const oldTail = this.tail;
         this.tail = oldTail.prev;
@@ -62,11 +68,13 @@ class IDLL {
 
     
     peekAtHead() { 
+        // return the head node! But...
         if (!this.head) return;
         return this.head;
     }
 
     peekAtTail() { 
+        // return the tail node! But...
         if (!this.tail) return;
         return this.tail;
     }

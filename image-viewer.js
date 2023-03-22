@@ -109,6 +109,8 @@ window.addEventListener("DOMContentLoaded", () => {
     deleteFromHead.addEventListener('click', (event) => {
         // Deletes the image from the head
         let head = kittens.peekAtHead();
+
+        // Checks if head is visible as either the mainImage or the nextImage
         let needToUpdateMain = false;
         let needToUpdatePrev = false;
         console.log(mainImageLoc.src)
@@ -128,6 +130,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     deleteFromTail.addEventListener('click', (event) => {
         // Deletes the image from the tail
+
+        // Checks if tail is visible as either the mainImage or the nextImage
         let needToUpdateMain = false;
         let needToUpdateNext = false;
         let tailImage = kittens.peekAtTail()
